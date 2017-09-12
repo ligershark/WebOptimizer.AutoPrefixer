@@ -1,5 +1,5 @@
 image: Visual Studio 2017
-version: 2.7.{build}
+version: 7.1.{build}
 
 install:
    # .NET Core SDK binaries
@@ -17,7 +17,7 @@ build_script:
   - ps: dotnet build /p:configuration=Release /p:Version=$($env:appveyor_build_version)-beta
 
 test_script:
-  - dotnet test test/WebOptimizer.Less.Test.csproj
+  - dotnet test test/WebOptimizer.AutoPrefixer.Test.csproj
 
 artifacts:
   - path: src\bin\release\*.nupkg

@@ -1,6 +1,6 @@
 # A CSS autoprefixer for ASP.NET Core
 
-[![Build status](https://ci.appveyor.com/api/projects/status/dtkck6ymi5rjykln?svg=true)](https://ci.appveyor.com/project/madskristensen/weboptimizer-less)
+[![Build status](https://ci.appveyor.com/api/projects/status/1272n9680fbqcsop?svg=true)](https://ci.appveyor.com/project/madskristensen/weboptimizer-autoprefixer)
 [![NuGet](https://img.shields.io/nuget/v/LigerShark.WebOptimizer.AutoPrefixer.svg)](https://nuget.org/packages/LigerShark.WebOptimizer.AutoPrefixer/)
 
 This package compiles TypeScript, ES6 and JSX files into ES5 by hooking into the [LigerShark.WebOptimizer](https://github.com/ligershark/WebOptimizer) pipeline.

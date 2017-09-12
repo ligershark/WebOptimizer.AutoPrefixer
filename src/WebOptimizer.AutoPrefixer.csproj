@@ -2,20 +2,20 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\WebOptimizer.LESS.xml</DocumentationFile>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\WebOptimizer.AutoPrefixer.xml</DocumentationFile>
         <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <PackageTags>LESS, bundle, minify, css, asp.net core</PackageTags>
+        <PackageTags>autoprefixer, css, asp.net core</PackageTags>
         <Version>1.0.0-beta</Version>
         <Authors>LigerShark</Authors>
         <Company>LigerShark</Company>
-        <Description>Compiles LESS files for the LigerShark.WebOptimizer.Core system.</Description>
+        <Description>Autoprefixes CSS files for the LigerShark.WebOptimizer.Core system.</Description>
         <Copyright>Copyright © LigerShark</Copyright>
-        <PackageId>LigerShark.WebOptimizer.LESS</PackageId>
-        <Product>LigerShark.WebOptimizer.LESS</Product>
+        <PackageId>LigerShark.WebOptimizer.AutoPrefixer</PackageId>
+        <Product>LigerShark.WebOptimizer.AutoPrefixer</Product>
         <PackageIconUrl>https://raw.githubusercontent.com/ligershark/WebOptimizer/master/art/logo64x64.png</PackageIconUrl>
-        <PackageProjectUrl>https://github.com/ligershark/WebOptimizer.Less</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/ligershark/WebOptimizer.Less/blob/master/LICENSE.txt</PackageLicenseUrl>
-        <RepositoryUrl>https://github.com/ligershark/WebOptimizer.Less</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/ligershark/WebOptimizer.AutoPrefixer</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/ligershark/WebOptimizer.AutoPrefixer/blob/master/LICENSE.txt</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/ligershark/WebOptimizer.AutoPrefixer</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
