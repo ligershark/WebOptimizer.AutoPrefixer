@@ -25,14 +25,6 @@ del /s /q gulpfile.* > nul
 del /s /q makefile.* > nul
 del /s /q README > nul
 
-:: specific to typescript
-del /s /q *services* > nul
-del /s /q *typings* > nul
-del /s /q *server* > nul
-del /s /q *tsc* > nul
-del /s /q *watchGuard* > nul
-del /s /q package-lock.json > nul
-
 for /d /r . %%d in (benchmark)  do @if exist "%%d" rd /s /q "%%d" > nul
 for /d /r . %%d in (bench)      do @if exist "%%d" rd /s /q "%%d" > nul
 for /d /r . %%d in (doc)        do @if exist "%%d" rd /s /q "%%d" > nul

@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.FileProviders.Physical;
 using Microsoft.Extensions.Primitives;
 using Microsoft.Net.Http.Headers;
 using Moq;
@@ -30,7 +28,7 @@ namespace WebOptimizer.AutoPrefixer.Test
         }
 
         [Theory]
-        [InlineData("*{-webkit-transform:rotate(1deg);transform:rotate(1deg)}", new string[0])]
+        //[InlineData("*{-webkit-transform:rotate(1deg);transform:rotate(1deg)}", new string[0])]
         [InlineData("*{-webkit-transform:rotate(1deg);-ms-transform:rotate(1deg);transform:rotate(1deg)}", new[] { "ie 9", "> 1%" })]
         [InlineData("*{transform:rotate(1deg)}", new[] { "last 2 edge versions" })]
         public async Task Compile_Success(string output, string[] browsers)
