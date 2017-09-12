@@ -49,8 +49,8 @@ for /d /r . %%d in (testing)    do @if exist "%%d" rd /s /q "%%d" > nul
 for /d /r . %%d in (tst)        do @if exist "%%d" rd /s /q "%%d" > nul
 
 echo Compressing artifacts and cleans up...
-"%~dp07z.exe" a -r "%~dp0..\src\node_files.zip" ./node * > nul
-rmdir /S /Q "%~dp0node\node_modules" > nul
+"%~dp07z.exe" a -r "%~dp0..\src\node_files.zip" ./node *
+rmdir /S /Q "%~dp0node\node_modules"
 
 
 :done
