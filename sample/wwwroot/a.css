@@ -1,0 +1,5 @@
+﻿body {
+    transform: rotate(89deg);
+    display: flex;
+    flex-wrap: wrap;
+}
