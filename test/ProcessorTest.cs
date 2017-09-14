@@ -58,25 +58,5 @@ namespace WebOptimizer.AutoPrefixer.Test
 
             Assert.Equal(output, result.AsString().Trim());
         }
-
-        [Theory]
-        [InlineData("Safari", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.7")]
-        [InlineData("Explorer", "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko")]
-        [InlineData("Firefox", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:55.0) Gecko/20100101 Firefox/55.0")]
-        [InlineData("Opera", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36 OPR/47.0.2631.80")]
-        [InlineData("Edge", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063")]
-        [InlineData("Chrome", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36")]
-        public void GetBrowserName(string name, string ua)
-        {
-            var request = new Mock<HttpRequest>();
-
-            var header = new StringValues(ua);
-            request.Setup(r => r.Headers.TryGetValue(HeaderNames.UserAgent, out header))
-                   .Returns(true);
-
-            var result = AutoPrefixerProcessor.GetBrowserName(request.Object);
-            Assert.Contains(name, result);
-
-        }
     }
 }

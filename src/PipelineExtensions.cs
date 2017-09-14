@@ -14,7 +14,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         public static IAsset AutoPrefixCss(this IAsset asset)
         {
-            return asset.AutoPrefixCss(new string[0]);
+            return asset.AutoPrefixCss("> 1%");
         }
 
         /// <summary>

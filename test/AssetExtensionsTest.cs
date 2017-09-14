@@ -17,7 +17,7 @@ namespace WebOptimizer.AutoPrefixer.Test
             asset.AutoPrefixCss();
 
             Assert.Equal(1, asset.Processors.Count);
-            Assert.True(asset.Processors.Any(p => p is AutoPrefixerProcessor));
+            Assert.Contains(asset.Processors, _ => { return _ is AutoPrefixerProcessor; });
         }
 
         [Fact]
@@ -30,7 +30,7 @@ namespace WebOptimizer.AutoPrefixer.Test
             foreach (IAsset asset in assets)
             {
                 Assert.Equal(1, asset.Processors.Count);
-                Assert.True(asset.Processors.Any(p => p is AutoPrefixerProcessor));
+                Assert.Contains(asset.Processors, _ => { return _ is AutoPrefixerProcessor; });
             }
         }
 
